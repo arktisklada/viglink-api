@@ -8,10 +8,10 @@ Gem::Specification.new do |gem|
   gem.version       = ViglinkApi::VERSION
   gem.authors       = ["Clayton Liggitt"]
   gem.email         = ["mail@enorganik.com"]
-  gem.description   = %q{Viglink API Wrapper}
-  gem.summary       = gem.description
-  gem.homepage      = "http://www.github.com/arktisklada"
-
+  gem.description   = "Viglink API Wrapper"
+  gem.summary       = "This gem is a wrapper for the Viglink Catalog API.  This gem contains module methods for each API endpoint, as well as an additional subset for the CUID revenue API."
+  gem.homepage      = "https://github.com/arktisklada/viglink-api"
+  
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})

@@ -8,7 +8,7 @@ module ViglinkApi
 
     include Request
 
-    attr_reader :api_secret, :api_cuid_url, :last_date
+    attr_reader :api_secret, :api_cuid_url, :last_date, :period
 
     ##
     # Create a new ViglinkApi::Client object
