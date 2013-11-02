@@ -15,7 +15,7 @@ module ViglinkApi
     #
     # @params options [Hash]
     def initialize(options={})
-      @api_secret = options[:api_secret] || nil
+      @api_secret = options[:api_secret] || ViglinkApi.api_secret
       @api_cuid_url = options[:api_cuid_url] || ViglinkApi.api_cuid_url
       @last_date = options[:last_date] || 1.day.ago.strftime("%Y/%m/%d")
       @period = options[:period] || "day"

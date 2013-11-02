@@ -37,6 +37,7 @@ module ViglinkApi
       @connection = Faraday.new(url: api_url, params: params, headers: default_headers) do |faraday|
         faraday.use FaradayMiddleware::Mashify
         faraday.use FaradayMiddleware::ParseXml, content_type: /\bxml$/
+        # faraday.request :url_encoded
         faraday.adapter Faraday.default_adapter
       end
     end

@@ -20,7 +20,6 @@ module ViglinkApi
       else
         deals_response.response.results.deals if deals_response.response.results
       end
-
     end
 
     ##

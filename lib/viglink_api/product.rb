@@ -19,7 +19,6 @@ module ViglinkApi
       else
         products_response.response.results.products if products_response.response.results
       end
-
     end
 
   end

@@ -9,7 +9,7 @@ require 'viglink_api/purchases'
 module ViglinkApi
 
   class << self
-    attr_accessor :api_url, :api_key, :api_full_response
+    attr_accessor :api_url, :api_key, :api_secret, :api_full_response, :api_cuid_url
 
     ##
     # Configure default credentials
@@ -25,6 +25,8 @@ module ViglinkApi
 
     def load_defaults
       self.api_url ||= 'http://catalog.viglink.com'
+      self.api_key ||= nil
+      self.api_secret ||= nil
       self.api_full_response ||= true
 
       self.api_cuid_url ||= 'https://www.viglink.com/service/v1/cuidRevenue'
@@ -34,11 +36,11 @@ module ViglinkApi
 
 end
 
-class String
-  def to_bool
-    return true if self == true || self =~ (/(true|t|yes|y|1)$/i)
-    return false if self == false || self.blank? || self =~ (/(false|f|no|n|0)$/i)
-    raise ArgumentError.new("invalid value for Boolean: \"#{self}\"")
-  end
-end
+# class String
+#   def to_bool
+#     return true if self == true || self =~ (/(true|t|yes|y|1)$/i)
+#     return false if self == false || self.blank? || self =~ (/(false|f|no|n|0)$/i)
+#     raise ArgumentError.new("invalid value for Boolean: \"#{self}\"")
+#   end
+# end
 
