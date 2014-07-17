@@ -20,9 +20,9 @@ And then execute bundler:
 
 ## Usage
 
-#### Command Line
+#### Irb/Console
 
-To use on the command line, simply require the file and create a new client
+To use in irb or a console, simply require the file and create a new client
 
 ```ruby
 require 'viglink_api'
@@ -39,6 +39,12 @@ Include the `viglink-api` gem in your Gemfile and bundle.  The module can be con
 ViglinkApi.configure do |config|
 	config.api_key = "your_api_key"
 end
+```
+
+And then initialize a client with the following:
+
+```ruby
+viglink = ViglinkApi::Client.new
 ```
 
 Please see below for more configuration options.

@@ -11,6 +11,7 @@ Gem::Specification.new do |gem|
   gem.description   = "Viglink API Wrapper"
   gem.summary       = "This gem is a wrapper for the Viglink Catalog API.  This gem contains module methods for each API endpoint, as well as an additional subset for the CUID revenue API."
   gem.homepage      = "https://github.com/arktisklada/viglink-api"
+  gem.license       = 'GPL-2'
   
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
